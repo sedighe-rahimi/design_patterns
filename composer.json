@@ -1,5 +1,5 @@
 {
-    "name": "srahimi/php",
+    "name": "srahimi/design_patterns",
     "type": "project",
     "autoload": {
         "psr-4": {
