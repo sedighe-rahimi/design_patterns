@@ -12,6 +12,7 @@ use App\DesignPatterns\Facade\UserFacade;
 use App\DesignPatterns\Observer\Observer1;
 use App\DesignPatterns\Observer\Observer2;
 use App\DesignPatterns\Observer\Subject;
+use App\DesignPatterns\Proxy\UserProxy;
 
 ?>
 <!DOCTYPE html>
@@ -74,6 +75,18 @@ use App\DesignPatterns\Observer\Subject;
         var_dump($user->get());
 
 
+        // *********************** Proxy Design Pattern
+        echo "<h2>Proxy Design Pattern</h2>";
+        $userInfo = new UserProxy();
+        $userInfo = $userInfo->get(2);
+        
+        echo '<h4>User Info :</h4>';
+        echo '<ul>';
+        foreach( $userInfo as $key => $info )
+        {
+            echo '<li>' . $key . ' : ' . $info . '</li>';
+        }
+        echo '</ul>';
 
     ?>
 
