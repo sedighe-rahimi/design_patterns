@@ -8,6 +8,7 @@ use App\DesignPatterns\Decorator\Car\Feature3;
 use App\DesignPatterns\Decorator\Message\Email;
 use App\DesignPatterns\Decorator\Message\Message;
 use App\DesignPatterns\Decorator\Message\Sms;
+use App\DesignPatterns\Facade\UserFacade;
 use App\DesignPatterns\Observer\Observer1;
 use App\DesignPatterns\Observer\Observer2;
 use App\DesignPatterns\Observer\Subject;
@@ -56,6 +57,21 @@ use App\DesignPatterns\Observer\Subject;
             echo '<li>' . $option . '</li>';
         }
         echo '</ul>';
+        
+
+        // *********************** Facade Design Pattern
+        echo "<h2>Facade Design Pattern</h2>";
+        $user = new UserFacade();
+        $user->create( 'Sedighe' , 's.rahimi@gmail.com' , '123456');
+        var_dump($user->get());
+        echo '<br>';
+
+        $newUserData = [
+            'email'     => 'ss.rahimi8667@gmail.com',
+            'password'  => '987654'
+        ];
+        $user->update($newUserData);
+        var_dump($user->get());
 
 
 
