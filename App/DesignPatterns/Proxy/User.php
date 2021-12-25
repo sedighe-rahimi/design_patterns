@@ -1,9 +1,8 @@
 <?php
 namespace App\DesignPatterns\Proxy;
+use App\DesignPatterns\Proxy\UserAbstract;
 
-use stdClass;
-
-class User
+class User extends UserAbstract
 {
     protected $users;
 

@@ -1,7 +1,7 @@
 <?php
 namespace App\DesignPatterns\Proxy;
 
-class UserAbstract
+abstract class UserAbstract
 {
-    public function get($id){}
+    abstract public function get($id);
 }
