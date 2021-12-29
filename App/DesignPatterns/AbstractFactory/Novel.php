@@ -1,5 +1,5 @@
 <?php
-namespace App\DesignPatterns\Factory;
+namespace App\DesignPatterns\AbstractFactory;
 
 class Novel implements BookInterface
 {

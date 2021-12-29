@@ -1,12 +1,12 @@
 <?php
 namespace App\DesignPatterns\Factory;
 
-class Poetry implements BookInterface
+class Book implements BookInterface
 {
+    
     public $name;
-    public $poet;
+    public $author;
     public $isbn;
-    public $type = 'شعر';
 
     public function setName( $name )
     {
@@ -14,9 +14,9 @@ class Poetry implements BookInterface
         return $this;
     }
 
-    public function setPoet( $poet )
+    public function setAuthor( $author )
     {
-        $this->poet = $poet;
+        $this->author = $author;
         return $this;
     }
 
@@ -30,7 +30,7 @@ class Poetry implements BookInterface
     {
         $info = "
                 Name : {$this->name},<br>
-                Poet : {$this->poet},<br>
+                Author : {$this->author},<br>
                 ISBN : {$this->isbn},<br>
                 ";
         return $info;

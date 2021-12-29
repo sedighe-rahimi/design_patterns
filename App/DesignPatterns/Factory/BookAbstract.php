@@ -3,5 +3,5 @@ namespace App\DesignPatterns\Factory;
 
 abstract class BookAbstract 
 {
-    abstract public function newBook( string $type );
+    abstract public function newBook();
 }

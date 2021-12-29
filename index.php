@@ -10,6 +10,7 @@ use App\DesignPatterns\Decorator\Message\Message;
 use App\DesignPatterns\Decorator\Message\Sms;
 use App\DesignPatterns\Facade\UserFacade;
 use App\DesignPatterns\Factory\BookFactory;
+use App\DesignPatterns\AbstractFactory\BookFactory as ABookFactory;
 use App\DesignPatterns\Observer\Observer1;
 use App\DesignPatterns\Observer\Observer2;
 use App\DesignPatterns\Observer\Subject;
@@ -120,20 +121,39 @@ use App\DesignPatterns\Template\Sms as TemplateSms;
         echo "<h2>Factory Design Pattern</h2>";
         $book = new BookFactory();
 
-        $poetBook = $book->newBook( 'poet' )
+        $book1 = $book->newBook()
+                        ->setName('همزاد')
+                        ->setAuthor('فئودور داستایفسکی')
+                        ->setIsbn('11111111111111111');
+
+        $book2 = $book->newBook()
+                        ->setName('چشم هایش')
+                        ->setAuthor('بزرگ علوی')
+                        ->setIsbn('22222222222222222');
+
+        echo $book1->getInfo() . '<br>';
+        echo $book2->getInfo();
+
+
+        
+        // *********************** AbstractFactory Design Pattern
+        echo "<h2>AbstractFactory Design Pattern</h2>";
+        $abs_book = new ABookFactory();
+
+        $poetBook = $abs_book->newBook( 'poet' )
                             ->setName('بوستان سعدی')
                             ->setPoet('سعدی')
-                            ->setIsbn('11111111111111111');
+                            ->setIsbn('33333333333333333333333');
 
-        $novelBook = $book->newBook( 'novel' )
+        $novelBook = $abs_book->newBook( 'novel' )
                             ->setName('جنایت و مکافات')
                             ->setAuthor('فئودور داستایفسکی')
-                            ->setIsbn('2222222222222222');
+                            ->setIsbn('444444444444444');
 
         echo $poetBook->type . '<br>' .
-             $poetBook->getInfo() . '<br>';
+            $poetBook->getInfo() . '<br>';
         echo $novelBook->type . '<br>' .
-             $novelBook->getInfo();
+            $novelBook->getInfo();
 
 
     ?>
