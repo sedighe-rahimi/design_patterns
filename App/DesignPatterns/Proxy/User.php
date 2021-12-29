@@ -1,6 +1,5 @@
 <?php
 namespace App\DesignPatterns\Proxy;
-use App\DesignPatterns\Proxy\UserAbstract;
 
 class User extends UserAbstract
 {

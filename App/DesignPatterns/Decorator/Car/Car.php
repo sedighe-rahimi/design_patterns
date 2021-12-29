@@ -1,6 +1,5 @@
 <?php
 namespace App\DesignPatterns\Decorator\Car;
-use App\DesignPatterns\Decorator\Car\CarInterface;
 
 class Car implements CarInterface
 {

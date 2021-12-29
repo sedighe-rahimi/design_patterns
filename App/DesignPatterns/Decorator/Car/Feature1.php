@@ -1,7 +1,5 @@
 <?php
 namespace App\DesignPatterns\Decorator\Car;
-use App\DesignPatterns\Decorator\Car\CarAbstract;
-use App\DesignPatterns\Decorator\Car\CarInterface;
 
 class Feature1 extends CarAbstract
 {

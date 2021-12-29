@@ -1,5 +1,4 @@
 <?php namespace App\DesignPatterns\Decorator\Message;
-use App\DesignPatterns\Decorator\Message\MessageAbstract;
 
 class Sms extends MessageAbstract
 {

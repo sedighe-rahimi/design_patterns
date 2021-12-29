@@ -9,6 +9,7 @@ use App\DesignPatterns\Decorator\Message\Email;
 use App\DesignPatterns\Decorator\Message\Message;
 use App\DesignPatterns\Decorator\Message\Sms;
 use App\DesignPatterns\Facade\UserFacade;
+use App\DesignPatterns\Factory\BookFactory;
 use App\DesignPatterns\Observer\Observer1;
 use App\DesignPatterns\Observer\Observer2;
 use App\DesignPatterns\Observer\Subject;
@@ -112,6 +113,28 @@ use App\DesignPatterns\Template\Sms as TemplateSms;
         echo '<h4>SMS messgae :</h4>';
         echo $smsMessgaeTemp->getMessgae();
         echo '</div>';
+
+
+        
+        // *********************** Factory Design Pattern
+        echo "<h2>Factory Design Pattern</h2>";
+        $book = new BookFactory();
+
+        $poetBook = $book->newBook( 'poet' )
+                            ->setName('بوستان سعدی')
+                            ->setPoet('سعدی')
+                            ->setIsbn('11111111111111111');
+
+        $novelBook = $book->newBook( 'novel' )
+                            ->setName('جنایت و مکافات')
+                            ->setAuthor('فئودور داستایفسکی')
+                            ->setIsbn('2222222222222222');
+
+        echo $poetBook->type . '<br>' .
+             $poetBook->getInfo() . '<br>';
+        echo $novelBook->type . '<br>' .
+             $novelBook->getInfo();
+
 
     ?>
 

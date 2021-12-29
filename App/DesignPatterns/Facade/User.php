@@ -1,8 +1,6 @@
 <?php
 namespace App\DesignPatterns\Facade;
 
-use stdClass;
-
 class User
 {
     public $name;

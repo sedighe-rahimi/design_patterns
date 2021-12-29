@@ -1,6 +1,5 @@
 <?php
 namespace App\DesignPatterns\Template;
-use App\DesignPatterns\Template\MsgAbstract;
 
 class Email extends MsgAbstract
 {

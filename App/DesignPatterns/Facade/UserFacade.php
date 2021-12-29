@@ -1,7 +1,5 @@
 <?php
 namespace App\DesignPatterns\Facade;
-use App\DesignPatterns\Facade\User;
-use App\DesignPatterns\Facade\Auth;
 
 class UserFacade
 {

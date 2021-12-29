@@ -1,7 +1,5 @@
 <?php
 namespace App\DesignPatterns\Facade;
-use App\DesignPatterns\Facade\User;
-use App\DesignPatterns\Facade\UserValidation;
 session_start();
 
 class Auth

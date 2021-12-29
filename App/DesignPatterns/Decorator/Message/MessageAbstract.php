@@ -1,5 +1,4 @@
 <?php namespace App\DesignPatterns\Decorator\Message;
-use App\DesignPatterns\Decorator\Message\MessageInterface;
 
 abstract class MessageAbstract implements MessageInterface
 {
