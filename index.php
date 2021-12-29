@@ -15,6 +15,7 @@ use App\DesignPatterns\Observer\Observer1;
 use App\DesignPatterns\Observer\Observer2;
 use App\DesignPatterns\Observer\Subject;
 use App\DesignPatterns\Proxy\UserProxy;
+use App\DesignPatterns\Singleton\DB\DB;
 use App\DesignPatterns\Template\Email as TemplateEmail;
 use App\DesignPatterns\Template\Sms as TemplateSms;
 
@@ -154,6 +155,16 @@ use App\DesignPatterns\Template\Sms as TemplateSms;
             $poetBook->getInfo() . '<br>';
         echo $novelBook->type . '<br>' .
             $novelBook->getInfo();
+
+            
+        
+        // *********************** Singleton Design Pattern
+        echo "<h2>Singleton Design Pattern</h2>";
+        $dbObj = DB::getDBobject();
+        var_dump($dbObj->getConnection());
+        echo '<br>';
+        $dbObj2 = DB::getDBobject();
+        var_dump($dbObj2->getConnection());
 
 
     ?>
