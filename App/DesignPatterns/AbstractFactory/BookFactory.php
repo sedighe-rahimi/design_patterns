@@ -3,9 +3,12 @@ namespace App\DesignPatterns\AbstractFactory;
 
 class BookFactory extends BookAbstract
 {
-    public function newBook ( $type )
+    public function newPoet ()
     {
-        if( strtolower($type) == 'poet' )   return new Poetry();
-        elseif( strtolower($type) == 'novel' )   return new Novel();
+        return new Poetry();
+    }
+    public function newNovel ()
+    {
+        return new Novel();
     }
 }

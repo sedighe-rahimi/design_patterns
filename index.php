@@ -140,12 +140,12 @@ use App\DesignPatterns\Template\Sms as TemplateSms;
         echo "<h2>AbstractFactory Design Pattern</h2>";
         $abs_book = new ABookFactory();
 
-        $poetBook = $abs_book->newBook( 'poet' )
+        $poetBook = $abs_book->newPoet()
                             ->setName('بوستان سعدی')
                             ->setPoet('سعدی')
                             ->setIsbn('33333333333333333333333');
 
-        $novelBook = $abs_book->newBook( 'novel' )
+        $novelBook = $abs_book->newNovel()
                             ->setName('جنایت و مکافات')
                             ->setAuthor('فئودور داستایفسکی')
                             ->setIsbn('444444444444444');
